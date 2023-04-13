@@ -1,0 +1,134 @@
+nav ul li{
+    display: inline-block;
+    font-family: 'Shadows Into Light', 'Arvo', 'Noto Sans';
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    background-color: #ffffff;
+    width: 100%;
+    height: 60px;
+    z-index: 999;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:visited{
+    color: #000000;
+    text-decoration: none;
+}
+
+.skip{
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.skip:focus {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: auto;
+    background-color: #ffffff;
+    font-family: 'Shadows Into Light', 'Arvo', 'Noto Sans';
+    z-index: 999;
+    font-size: 20px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    margin: 10px auto;
+    width: 90%;
+    /* border: solid 1px red; */
+    text-align: center;
+    justify-content: space-around;
+}
+
+.grid-item {
+    font-family: 'Shadows Into Light', 'Arvo', 'Noto Sans';
+    font-size: 26px;
+    width: 200px;
+    margin-bottom: 80px;
+    /* border: #000000 solid 1px; */
+}
+
+.image_container {
+    position: relative;
+    margin: 0 auto;
+    margin-top: 150px;
+    height: 300px;
+    width: 450px;
+}
+
+#kendama_start{
+    position: absolute;
+    padding-top: 65px;
+    left: 70px;
+    right: 0;
+    margin: auto;
+}
+
+#hover_image{
+    position: absolute;
+    padding-top: 30px;
+    left: 157px;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    /* transition: opacity .2s; */
+}
+
+.image_container:hover #hover_image {
+    opacity: 1;
+}
+
+.image_container:hover #kendama_start {
+    opacity: 0;
+}
+
+h1 {
+    font-size: 36px;
+    font-family: 'Shadows Into Light', 'Arvo', 'Noto Sans';
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
+p {
+    font-weight: bold;
+}
+
+.beginner {
+    border-radius: 100%;
+}
+
+.beginner:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.beginner:hover {
+    outline: 2px solid #2d2b2b;
+    outline-offset: 10px;
+    transition: 0.3s;
+}
+
+#background_video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    top: -500px;
+}
