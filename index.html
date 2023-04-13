@@ -8,13 +8,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Sans:ital,wght@0,300;1,300&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
     <link rel="icon" id="title_icon" type="images/x-icon" href="images/Asset_start.png">
     <title>Emily's Final Project</title>
 </head>
 <body>
     <header>
         <a href="#main" class="skip">Skip to main content</a>
-        <nav class="navbar">
+        <nav class="navbar_home">
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="tricks.html">Tricks</a></li> 
@@ -25,9 +26,16 @@
     </header>
 
     <main>
-        <video autoplay muted loop id="background_video">
-            <source src="images/background.mp4" type="video/mp4">
-        </video>
-
+        <div>
+            <video autoplay muted loop id="background_video">
+                <source src="images/background.mp4" type="video/mp4">
+            </video>
+            <h1 class="intro">Hi! This is Emily Tsai!</h1>
+            <p class="intro_content">I am recently learning kendama and am excited to explore more cool tricks :)</p>
+        </div>
+        <div id="kendama_history">
+            <h2>History</h2>
+            <p id="history_detail">Kendama is a traditional Japanese skill toy that consists of a wooden handle with a ball attached by a string. It has gained popularity worldwide and is used for developing hand-eye coordination, focus, and creativity. Kendama is a fun and challenging pastime enjoyed by children and adults alike.</p>
+        </div>
     </main>
 </body>
