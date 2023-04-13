@@ -161,23 +161,17 @@ p {
     color: #000000;
 }
 
-#kendama_history {
-    position: relative;
-    font-family: 'Nunito', 'Arvo';
-    top: 200px;
-    height: 500px;
-    background-color: #ffffff;
-}
-
 h2 {
     font-size: 30px;
+    font-family: 'Shadows Into Light', 'Arvo', 'Noto Sans';
     padding-top: 50px;
     padding: 50px 60px;
 }
 
 #history_detail {
-    font-size: 18px;
-    padding: 0px 60px;
+    font-family: 'Shadows Into Light', 'Arvo', 'Noto Sans';
+    font-size: 22px;
+    padding: 0px 60px 100px 60px;
 }
 
 
