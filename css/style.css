@@ -159,13 +159,15 @@ p {
     font-size: 36px;
     margin-left: 550px;
     color: #000000;
+    margin-bottom: 100px;
 }
 
 h2 {
+    font-weight: bold;
     font-size: 30px;
     font-family: 'Shadows Into Light', 'Arvo', 'Noto Sans';
     padding-top: 50px;
-    padding: 50px 60px;
+    padding: 10px 60px;
 }
 
 #history_detail {
@@ -174,9 +176,117 @@ h2 {
     padding: 0px 60px 100px 60px;
 }
 
+li {
+    font-weight: bold;
+}
 
+.book {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: 50px auto;
+    perspective: 1000px;
+  }
+  
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: 1px solid black;
+    box-sizing: border-box;
+    font-size: 40px;
+    text-align: center;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    margin-top: 30px;
+}
+  
+.page1 {
+    transform: rotateY(0deg) translateZ(0px);
+}
+  
+.page2 {
+    transform: rotateY(-180deg) translateZ(-1px);
+}
+  
+.page3 {
+    transform: rotateY(-360deg) translateZ(-2px);
+}
+  
+.page4 {
+    transform: rotateY(-540deg) translateZ(-3px);
+}
+  
+.page5 {
+    transform: rotateY(-720deg) translateZ(-4px);
+}
+  
+.page6 {
+    transform: rotateY(-900deg) translateZ(-5px);
+}
+  
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+  
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3d3d3d;
+    color: white;
+    cursor: pointer;
+}
+  
+button:hover {
+    background-color: #5d5d5d;
+}
 
-
+.disk {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+  
+.outer-ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* border: 10px solid black; */
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(227,227,227,1) 25%, rgba(255,255,255,1) 70%, rgba(0,0,0,1) 100%);
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotate 3s linear infinite;
+}
+  
+.inner-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    border: 10px solid white;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+  
+@keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+  
 
 @media screen and (prefers-reduced-motion: reduce){
     /*Turn off scroll*/
@@ -195,3 +305,271 @@ h2 {
       background-attachment: initial;
     }
   }
+
+html, body {
+    margin:0;
+    padding:0;
+  }
+  
+.comic {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Shadows Into Light', 'Arvo', 'Noto Sans';
+    padding: 1vmin;
+    margin-top: 50px;
+}
+  
+.panel {
+    background-color:#fff;
+    border:solid 2px #000;
+    box-shadow:0 6px 6px -6px #000;
+    display:inline-block;
+    flex:1 1;
+    height:200px;
+    margin:1vmin;
+    overflow:hidden;
+    position:relative;
+  }
+  
+.text {
+    background-color:#fff;
+    border:solid 2px #000;
+    margin:0;
+    padding:3px 10px;
+    font-size: 20px;
+  }
+  
+.top-left {
+    left:-6px;
+    position:absolute;
+    top:-2px;
+    transform:skew(-15deg);
+  }
+  
+.bottom-right {
+    bottom:-2px;
+    position:absolute;
+    right:-6px;
+    transform:skew(-15deg);
+  }
+  
+.speech {
+    background-color:#fff;
+    border:solid 2px #000;
+    border-radius:12px;
+    display:inline-block;
+    margin:.5em;
+    padding:.5em 1em;
+    position:relative;
+    font-size: 20px;
+  }
+  
+.speech:before {
+    border:solid 12px transparent;
+    border-left:solid 12px #000;
+    border-top:solid 12px #000;
+    bottom:-24px;
+    content:"";
+    height:0;
+    left:24px;
+    position:absolute;
+    transform:skew(-15deg);
+    width:0;
+  }
+  
+.speech:after {
+    border:solid 10px transparent;
+    border-left:solid 10px #fff;
+    border-top:solid 10px #fff;
+    bottom:-19px;
+    content:"";
+    height:0;
+    left:27px;
+    position:absolute;
+    transform:skew(-15deg);
+    width:0;
+  }
+  
+.panel:nth-child(1) {
+    flex-basis: 400px;
+  }
+.panel:nth-child(2) {
+    flex-basis: 200px;
+  }
+.panel:nth-child(3) {
+    flex-basis: 200px;
+  }
+.panel:nth-child(4) {
+    flex-basis: 200px;
+  }
+.panel:nth-child(5) {
+    flex-basis: 200px;
+  }
+.panel:nth-child(6) {
+    flex-basis: 200px;
+  }
+.panel:nth-child(7) {
+    flex-basis: 400px;
+  }
+.panel:nth-child(8) {
+    flex-basis: 200px;
+  }
+.panel:nth-child(9) {
+    flex-basis: 200px;
+  }
+  
+  /* background colours */
+  
+.panel:nth-child(4n+1) {
+    background-color: #000000;
+  }
+  
+.panel:nth-child(4n+2) {
+    background-color: #ffffff;
+  }
+  
+.panel:nth-child(4n+3) {
+    background-color: #000000;
+  }
+  
+.panel:nth-child(4n+4) {
+    background-color: #ffffff;
+  }
+
+.middle {
+    font-size: 20px;
+    padding-top: 40px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.second-middle{
+    padding-top: 80px;
+    background-color: #ffffff;
+    border: none;
+}
+
+.third-middle {
+    background-color: #000000;
+    color: #ffffff;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+body {
+    padding: 0;
+    margin-top: 150px;
+    background: #000000;
+    font-family: "Roboto", sans-serif;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iphone {
+    width: 312px;
+    height: 612px;
+    background: #d3d3d3;
+    border-radius: 2em;
+    box-sizing: border-box;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+}
+.iphone .title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 0.75em;
+    margin-bottom: 2em;
+}
+.iphone .album-cover {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+.iphone .album-cover .album-overlay {
+    background: #ffffff;
+    width: 248px;
+    height: 248px;
+    z-index: 2;
+    border-radius: 15px;
+    position: absolute;
+    opacity: 0.35;
+    -webkit-clip-path: ellipse(61% 64% at 82% 56%);
+    clip-path: ellipse(61% 64% at 82% 56%);
+}
+.iphone .album-cover img {
+    width: 100%;
+    border-radius: 15px;
+}
+.iphone .album-cover .song-title {
+    text-align: center;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    color: #d3d3d3;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+}
+.iphone .album-cover .artist-title {
+    text-align: center;
+    padding: 1em 0;
+    margin: 0;
+    font-size: 0.85em;
+    color: #d3d3d3;
+}
+.iphone .track {
+    margin-top: 1em;
+    height: 10px;
+}
+.iphone .track div {
+    width: 42%;
+    height: 100%;
+    background: #d3d3d3;
+    opacity: 0.75;
+    border-radius: 15px;
+}
+.iphone .buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1em 0;
+}
+.iphone .lyrics {
+    color: #d3d3d3;
+    margin-top: 2em;
+    text-align: center;
+    font-size: 0.75em;
+    display: flex;
+    flex-direction: column;
+}
+.neu {
+    box-shadow: -5px -5px 15px 0px #fff 9e, 5px 5px 15px 0px #a3b1c6 a8;
+    background: #2b2b2d;
+    border-radius: 2em;
+    border: 0;
+}
+.btn {
+    padding: 15px;
+    border-radius: 30px;
+    color: #7e8a98;
+    outline: none;
+    cursor: pointer;
+}
+.btn.lg {
+    font-size: 1em;
+}
+.btn:active {
+    cursor: pointer;
+    box-shadow: inset -5px -5px 15px 0px #fff 9e, inset 5px 5px 15px 0px #a3b1c6 a8;
+}
+.red {
+    color: #e22d49;
+}
+
+.now-playing {
+    color:#d3d3d3;
+}
